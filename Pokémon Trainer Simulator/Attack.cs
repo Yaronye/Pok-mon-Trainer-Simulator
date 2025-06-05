@@ -12,9 +12,9 @@ namespace Pokémon_Trainer_Simulator
         ElementType Type = type;
         int BasePower = basePower;
 
-        public void Use(string name, int level)
+        public void Use(int pokemonLevel)
         {
-            Console.WriteLine(name + " hits with total power of " + BasePower + level + "!\n");
+            Console.WriteLine("{0} hits with total power of {2}!!!\n", Name, (BasePower + pokemonLevel));
         }
     }
 }
