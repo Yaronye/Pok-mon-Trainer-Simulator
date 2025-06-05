@@ -15,25 +15,50 @@ namespace Pokémon_Trainer_Simulator
         
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<Pokemon> TrainerPokemons = new List<Pokemon>();
 
-            //attacks
+            //Create attacks
             var flamethrower = new Attack("Flamethrower", ElementType.Fire, 12);
             var ember = new Attack("Ember", ElementType.Fire, 6);
-            var watergun = new Attack("Watergun", ElementType.Water, 12);
-            var surf = new Attack("Surf", ElementType.Water, 12);
-            var thunderwave = new Attack("Thunderwave", ElementType.Electric, 12);
-            var thunderbolt = new Attack("Thunderbolt", ElementType.Electric, 12);
-        //pokemon
+            var watergun = new Attack("Watergun", ElementType.Water, 5);
+            var surf = new Attack("Surf", ElementType.Water, 15);
+            var thunderwave = new Attack("Thunderwave", ElementType.Electric, 3);
+            var thunderbolt = new Attack("Thunderbolt", ElementType.Electric, 20);
+
+            //Create pokemons
             var cyndaquil = new Pokemon.FirePokemon //create cyndaquil
             { 
                 Name = "Cyndaquil",
                 Level = 3,
                 Attacks = new List<Attack> { ember, flamethrower }
             };
-            cyndaquil.Evolve("Quilava", 10);
+
+            var totodile = new Pokemon.WaterPokemon
+                { 
+                Name = "Totodile",
+                Level = 5,
+                Attacks = new List<Attack> { watergun, surf }
+                };
+
+            var pikachu = new Pokemon.ElectricPokemon
+            {
+                Name = "Pikachu",
+                Level = 10,
+                Attacks = new List<Attack> { thunderwave, thunderbolt }
+            };
+
+            //add pokemon to trainer list
+            TrainerPokemons.Add(cyndaquil);
+            TrainerPokemons.Add(totodile);
+            TrainerPokemons.Add(pikachu);
+
+            totodile.RaiseLevel(2);
+            pikachu.RaiseLevel(3);
+            cyndaquil.RaiseLevel(1);
+
+            cyndaquil.Evolve();
+
+
         }
     }
-
-
 }

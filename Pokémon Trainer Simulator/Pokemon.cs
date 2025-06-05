@@ -20,8 +20,8 @@ namespace Pokémon_Trainer_Simulator
             int newLevel = LevelAdditionCheck(levels);
             NameCheck(newName); 
 
-            Console.WriteLine("{0} evolved into {1}!", Name, newName);
-            Console.WriteLine("Level increased from {0} to {1}!", Level, Level + newLevel);
+            Console.WriteLine("What's this? {0} is evolving...\n.\n.\n.\n!\n{0} evolved into {1}!", Name, newName);
+            Console.WriteLine("Their level increased from {0} to {1}!", Level, Level + newLevel);
 
             Name = newName;
             Level = newLevel;
@@ -90,39 +90,47 @@ namespace Pokémon_Trainer_Simulator
             }
         }
 
-        public void RaiseLevel(int currentLevel, int increment)
+        public void RaiseLevel(int increment)
         {
             // That should increment the level of the given pokemon and print that the pokemon has leveled up.
             Console.WriteLine("Your pokemon has leveled up!\nlvl.{0} -> {1}", Level, Level + increment);
             Level += increment;
         }
 
-        public void Evolve()
-        {
-            throw new NotImplementedException();
-        }
-
-        public class FirePokemon : Pokemon
+        public class FirePokemon : Pokemon, IEvolveable
         {
             public FirePokemon()
             {
                 Type = ElementType.Fire;
             }
+            public void Evolve()
+            {
+                Evolve("Quilava", 10);
+            }
         }
 
-        public class WaterPokemon : Pokemon
+        public class WaterPokemon : Pokemon, IEvolveable
         {
             public WaterPokemon()
             {
                 Type = ElementType.Water;
             }
+            public void Evolve()
+            {
+                Evolve("Croconaw", 10);
+            }
         }
 
-        public class ElectricPokemon : Pokemon
+        public class ElectricPokemon : Pokemon, IEvolveable
         {
             public ElectricPokemon()
             {
                 Type = ElementType.Electric;
+                               
+            }
+            public void Evolve()
+            {
+                Evolve("Raichu", 10);
             }
         }
     }
