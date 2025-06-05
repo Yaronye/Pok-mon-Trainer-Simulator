@@ -52,8 +52,6 @@ namespace Pokémon_Trainer_Simulator
             TrainerPokemons.Add(totodile);
             TrainerPokemons.Add(pikachu);
 
-            //thunderbolt.Use(9);
-
             totodile.RaiseLevel(2);
             pikachu.RaiseLevel(3);
             cyndaquil.RaiseLevel(1);
@@ -61,6 +59,10 @@ namespace Pokémon_Trainer_Simulator
             cyndaquil.Evolve();
             totodile.Evolve();
             pikachu.Evolve();
+
+            thunderbolt.Use(pikachu.Level);
+            ember.Use(cyndaquil.Level);
+            surf.Use(totodile.Level);
 
 
         }

@@ -14,7 +14,7 @@ namespace Pokémon_Trainer_Simulator
 
         public void Use(int pokemonLevel)
         {
-            Console.WriteLine("{0} hits with total power of {2}!!!\n", Name, (BasePower + pokemonLevel));
+            Console.WriteLine("{0} hits with total power of {1}!!!\n", Name, (BasePower + pokemonLevel));
         }
     }
 }

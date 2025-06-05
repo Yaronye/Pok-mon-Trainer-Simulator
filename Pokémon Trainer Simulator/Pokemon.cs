@@ -21,7 +21,7 @@ namespace Pokémon_Trainer_Simulator
             NameCheck(newName); 
 
             Console.WriteLine("What's this? {0} is evolving...\n.\n.\n.\n!\n{0} evolved into {1}!", Name, newName);
-            Console.WriteLine("Their level increased from {0} to {1}!", Level, Level + newLevel);
+            Console.WriteLine("Its level increased from {0} to {1}!\n", Level, Level + newLevel);
 
             Name = newName;
             Level = newLevel;
