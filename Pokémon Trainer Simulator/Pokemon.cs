@@ -10,10 +10,10 @@ namespace Pokémon_Trainer_Simulator
 
     abstract class Pokemon() : IEvolveable
     {
-        public string Name { get; set; }
-        public int Level { get; set; }
-        public ElementType Type { get; set; }
-        public List<Attack> Attacks { get; set; }
+        public string Name;
+        public int Level;
+        public ElementType Type;
+        public List<Attack> Attacks;
 
         public void Evolve(string newName, int levels)
         {
