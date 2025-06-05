@@ -52,9 +52,9 @@ namespace Pokémon_Trainer_Simulator
             TrainerPokemons.Add(totodile);
             TrainerPokemons.Add(pikachu);
 
-            totodile.RaiseLevel(2);
-            pikachu.RaiseLevel(3);
-            cyndaquil.RaiseLevel(1);
+            TrainerPokemons[0].RaiseLevel(2);
+            TrainerPokemons[1].RaiseLevel(3);
+            TrainerPokemons[2].RaiseLevel(1);
 
             cyndaquil.Evolve();
             totodile.Evolve();

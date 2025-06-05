@@ -92,7 +92,7 @@ namespace Pokémon_Trainer_Simulator
 
         public void RaiseLevel(int increment)
         {
-            // That should increment the level of the given pokemon and print that the pokemon has leveled up.
+            // Increments the level of the given pokemon and print that the pokemon has leveled up.
             Console.WriteLine("Your {2} leveled up!\nlvl.{0} -> {1}\n", Level, Level + increment, Name);
             Level += increment;
         }
